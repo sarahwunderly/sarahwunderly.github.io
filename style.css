@@ -124,8 +124,7 @@ h1{
     }
 
 @keyframes blinkTextCursor{
-    /*removed 0.75 after the last 225 in RGBA*/
-  from{border-right-color: rgba(255,255,255);}
+  from{border-right-color: rgba(255, 255, 255, 0.75);}
   to{border-right-color: transparent;}
     }
     
