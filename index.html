@@ -2,18 +2,17 @@
 <html lang="en">
  
   <head>
-   
     <meta charset="utf-8">
     <title>Sarah Wunderly Portfolio</title>
     <link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
     <link rel="stylesheet" type="text/css" href="style.css" />
-    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+    
+    <script 
+    src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
     <script src="jquery.fullPage.js"></script>
     <script src="Header.js"></script>
-    
-     <script>
+    <script>
       $(document).ready(function() {
       $('#fullpage').fullpage({
       anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage'],
@@ -29,8 +28,7 @@
   <body onLoad= "drawCanvas()";>
    
     <div id="header"><a href='#firstPage'>Home</a> &emsp;&emsp; <a href='#secondPage'>About</a> &emsp;&emsp; <a href='#3rdPage'>Projects</a> &emsp;&emsp; <a href='#4thpage'>Contact</a></div>
-    
-     <div id="fullpage">
+    <div id="fullpage">
       <div class="section " id="section0">
         <div class="intro">
           <h1 class="line-1 anim-typewriter">Sarah Wunderly</h1>
@@ -42,46 +40,78 @@
         <div class="intro">
           <h1>About</h1>
           <br />
+          
           <!-- Is is this okay for an about me section?? Might update -->
           <p>As a high school student I was fascinated by classes involving coding and designing websites, so I decided to try out a Web Design. Even though it was just basic coding and using Adobe DreamWeaver and Muse, I fell in love with it. I have considerable knowledge with Adobe Photoshop, Muse, and Dreamweaver beacuse of these high school courses. Now that I'm a Sophomore at FGCU I've enrolled in a Computer Science course where I've learned about programming and have a basic knowledge of it, as well as a renewed passion for designing websites.
           </p>
-          
           <br />
           <br />
-          
-          <h3><u>Accomplishments</u></h3>
-          
           <br />
+          
+          <h3>
+            <svg height="30" width="160">
+              <text x="0" y="15" fill="black">Accomplishments</text>
+              Sorry, your browser does not support inline SVG.
+            </svg>
+          </h3>
           
           <ul>
             <li>Adobe Photoshop Certification</li>
             <li>1st place in Digital Knight Highschool competition 2016</li>
+            <li>Grow with Google Challenge Scholarship Recipient (Front End Web-Developer track)</li>
           </ul>
+          
         </div>
       </div>
       
       <div class="section" id="section2">
         <div class="intro">
           <h1>Projects</h1>
-          
+          <br />
+          <p>Click on any project to view it further</p>
           <br />
           <br />
           
-          <!-- Next checkpoint I will have this page finished -->
-          <p>
-          </p>
+          <div class="GalleryAlign">
+            <div class="textOverImageContainer">
+              <a href="https://student.fgcu.edu/sawunderly8697/index.html" class="textOverImage" style="background-image:url(Images/projects/HSProject.jpg)" data-title="High School Project" data-text="This project was created using entirely Adobe Photoshop and Muse. I started this project with zero knowledge of how Adobe Muse worked, but overtime I learned how to customize everything and make it look decent enough!
+                class: Web Design (2016)">
+              </a>
+            </div>
+            
+            <div class="textOverImageContainer">
+              <a class="textOverImage" style="background-image:url(Images/projects/ScratchProject.jpg)" data-title="Scratch Lyric Video" data-text="With this project I was tasked with learning how to use the website Scratch.mit.edu to make womething interesting while still following a set of guidlines. I decided to make a 'music video' with audio I had to customize. This project was assigned to get us used to the aspect of basic programming. Class: Computer Science (2018)">
+              </a>
+            </div>
+            
+            <div class="textOverImageContainer">
+              <a href="Images/projects/FieldReport.pdf" class="textOverImage" style="background-image:url(Images/projects/FieldReport.jpg)" 
+                data-title="Field Report" 
+                data-text="Update Later~">
+              </a>
+            </div>
+            <br />
+            
+            <p>Customized Audio from the Scratch Project using Audacity</p>
+            
+            <audio controls>
+              <source src="Audio/AUDIO%20FINAL.mp3" type="audio">
+              Your browser does not support the audio element.
+            </audio>
+            
+          </div>
         </div>
       </div>
       
       <div class="section" id="section3">
         <div class="intro">
           <h1>Contact</h1>
-          
           <br />
           <br />
           
           <!-- Will add more soon -->
           <div>
+           
             <script>
               function drawCanvas() {
               var circle_canvas = document.getElementById("canvas");
@@ -104,13 +134,15 @@
               context.drawImage(img, 120, 49);
                     };
               }
+              
+            </script>
             
-              </script>
-            <a href='https://sarahwunderly.github.io'>
+            <a href='https://github.com/sarahwunderly/sarahwunderly.github.io'>
               <canvas id="canvas" width="300" height="200">
                 <p>Sorry, your browser does not support canvas at this time!</p>
               </canvas>
             </a>
+            
           </div>
         </div>
       </div>
