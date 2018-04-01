@@ -26,7 +26,7 @@
     
   </head>
   
-  <body>
+  <body onLoad="drawCanvas();">
    
     <div id="header"><a href='#firstPage'>Home</a> &emsp;&emsp; <a href='#secondPage'>About</a> &emsp;&emsp; <a href='#3rdPage'>Projects</a> &emsp;&emsp; <a href='#4thpage'>Contact</a></div>
     
@@ -81,7 +81,7 @@
           <br />
           
           <!-- Will add more soon -->
-          <div onLoad="drawCanvas();">
+          <div>
             <script>
               function drawCanvas() {
               var circle_canvas = document.getElementById("canvas");
