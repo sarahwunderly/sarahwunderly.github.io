@@ -33,6 +33,8 @@ abbr,acronym { border: 0;
 }
 
 
+
+
 /* Custom CSS */
 body{
     width: 100%;
@@ -40,7 +42,9 @@ body{
 	color: #333;
 	color: rgba(0,0,0,0.5);
     align-content: center;
+    position:relative;
 }
+
 .wrap{
 	margin-left: auto;
 	margin-right: auto;
@@ -58,8 +62,9 @@ p{
 }
 .section{
 	text-align:center;
-	position:relative;
+    position:relative;
 }
+
 
 
 /* Style of Headers */
@@ -136,4 +141,111 @@ a:hover {
   from{border-right-color: rgba(255, 255, 255, 0.75);}
   to{border-right-color: transparent;}
     }
-    
+
+/* CSS for Image Gallery */
+
+a {
+  text-decoration: none;
+}
+/*Add the following compatibility code for IE as you can't animate background-size in IE*/
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .textOverImage {
+    background-size: cover !important;
+  }
+}
+
+.GalleryAlign {
+    margin-left: 20%;
+    margin-right:20%; 
+}
+
+.textOverImageContainer {
+  width: 33%;
+  position: relative;
+  float: left;
+  max-width: 450px;
+}
+
+@media (max-width: 668px) {
+  .textOverImageContainer {
+    width: 50%;
+  }
+}
+
+@media (max-width: 476px) {
+  .textOverImageContainer {
+    width: 100%;
+  }
+}
+.textOverImageContainer:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+.textOverImage {
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: 4px;
+  right: 4px;
+  background-size: auto 100%;
+  background-position: center;
+  transition: 0.5s;
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: 0 0 4px #000;
+  font-size: 2vh;
+}
+
+.textOverImage:hover {
+  background-size: auto 110%;
+}
+
+.textOverImage:before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(
+    90%
+  ); 
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  padding: 0 8px;
+  content: attr(data-title);
+  transition: 0.5s 0.1s;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.em;
+}
+
+.textOverImage:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  padding: 8px;
+  content: attr(data-text);
+  transition: 0.5s;
+  padding-top: 2em;
+  margin-top: 8px;
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.textOverImage:hover:after {
+  transform: translateY(0);
+  transition: 0.5s 0.1s;
+  opacity: 1;
+}
+.textOverImage:hover:before {
+  transform: translateY(0);
+  padding: 8px;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: 0.5s;
+}
+
+
