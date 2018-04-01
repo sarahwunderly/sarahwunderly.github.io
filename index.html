@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
+ 
   <head>
+   
     <meta charset="utf-8">
-	<title>Sarah Wunderly Portfolio</title>
-
-
-	<link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
-	<link rel="stylesheet" type="text/css" href="style.css" />
-	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="jquery.fullPage.js"></script>
-	<script type="text/javascript" src="Header.js"></script>
-
-	<script type="text/javascript">
+    <title>Sarah Wunderly Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+    <script src="jquery.fullPage.js"></script>
+    <script src="Header.js"></script>
+    
+     <script>
       $(document).ready(function() {
       $('#fullpage').fullpage({
       anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage'],
@@ -24,35 +23,39 @@
       });
       });
     </script>
-
-  </head>
-  <body>
-
-      <div id="header"><a href='#firstPage'>Home</a> &emsp;&emsp; <a href='#secondPage'>About</a> &emsp;&emsp; <a href='#3rdPage'>Projects</a> &emsp;&emsp; <a href='#4thpage'>Contact</a></div>
-
-    <div id="fullpage">
     
-	  <div class="section " id="section0">
-		<div class="intro">
+  </head>
+  
+  <body>
+   
+    <div id="header"><a href='#firstPage'>Home</a> &emsp;&emsp; <a href='#secondPage'>About</a> &emsp;&emsp; <a href='#3rdPage'>Projects</a> &emsp;&emsp; <a href='#4thpage'>Contact</a></div>
+    
+     <div id="fullpage">
+      <div class="section " id="section0">
+        <div class="intro">
           <h1 class="line-1 anim-typewriter">Sarah Wunderly</h1>
           <p>Web Designer</p>
-		</div>
-	  </div>
-     
-      <div class="section" id="section1">
+        </div>
+      </div>
+      
+       <div class="section" id="section1">
         <div class="intro">
           <h1>About</h1>
           <br />
           <!-- Is is this okay for an about me section?? Might update -->
           <p>As a high school student I was fascinated by classes involving coding and designing websites, so I decided to try out a Web Design. Even though it was just basic coding and using Adobe DreamWeaver and Muse, I fell in love with it. I have considerable knowledge with Adobe Photoshop, Muse, and Dreamweaver beacuse of these high school courses. Now that I'm a Sophomore at FGCU I've enrolled in a Computer Science course where I've learned about programming and have a basic knowledge of it, as well as a renewed passion for designing websites.
           </p>
+          
           <br />
           <br />
+          
           <h3><u>Accomplishments</u></h3>
+          
           <br />
+          
           <ul>
-              <li>Adobe Photoshop Certification</li>
-              <li>1st place in Digital Knight Highschool competition 2016</li>
+            <li>Adobe Photoshop Certification</li>
+            <li>1st place in Digital Knight Highschool competition 2016</li>
           </ul>
         </div>
       </div>
@@ -60,54 +63,57 @@
       <div class="section" id="section2">
         <div class="intro">
           <h1>Projects</h1>
+          
           <br />
           <br />
+          
           <!-- Next checkpoint I will have this page finished -->
-          <p><img src="Images/Underconstruction.png" alt="Coming Soon" width="500px" height="50%">
+          <p>
           </p>
         </div>
       </div>
-    
+      
       <div class="section" id="section3">
         <div class="intro">
           <h1>Contact</h1>
+          
           <br />
           <br />
+          
           <!-- Will add more soon -->
-          
-          <body onLoad="drawCanvas();">
-<script>
-function drawCanvas() {
-var circle_canvas = document.getElementById("canvas");
-var context = circle_canvas.getContext("2d");
-// Fill Style
-context.fillStyle = "rgba(255,255,255,.8)";
-// Begin path
-context.beginPath();
-//Canvas shape
-context.arc(170,100,50,0,Math.PI*2,true);
-// Close path
-context.closePath();
-// Fill shape
-context.fill();
-// Draw Image function
-var img = new Image();
-img.src = "Images/githubsmall.png";
-img.onload = function() {
-context.drawImage(img, 120, 49);
-      };
-}
-</script>
-    <canvas id="canvas" width="300" height="200">
-       <p>Sorry, your browser does not support canvas at this time!</p>
-    </canvas>
-            </body>    
-          
-          
-          
+          <div onLoad="drawCanvas();">
+            <script>
+              function drawCanvas() {
+              var circle_canvas = document.getElementById("canvas");
+              var context = circle_canvas.getContext("2d");
+              // Fill Style
+              context.fillStyle = "rgba(255,255,255,.8)";
+              // Begin path
+              context.beginPath();
+              //Canvas shape
+              context.arc(170,100,50,0,Math.PI*2,true);
+              // Close path
+              context.closePath();
+              // Fill shape
+              context.fill();
+              // Draw Image function
+              var img = new Image();
+              img.src = "Images/githubsmall.png";
+              img.href = 'sarahwunderly.github.io'
+              img.onload = function() {
+              context.drawImage(img, 120, 49);
+                    };
+              }
+            
+              </script>
+            <a href='https://sarahwunderly.github.io'>
+              <canvas id="canvas" width="300" height="200">
+                <p>Sorry, your browser does not support canvas at this time!</p>
+              </canvas>
+            </a>
+          </div>
         </div>
       </div>
-      
     </div>
   </body>
 </html>
