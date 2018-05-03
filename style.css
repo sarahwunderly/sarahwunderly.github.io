@@ -73,12 +73,12 @@ h1{
 	font-size: 5em;
 	font-family: arial,helvetica;
     font-weight: normal;
-	color: #fff;
+	color: #333;
     text-align: center;
 	}
 
 .intro p{
-    color: #fff;
+    color: #333;
 	}
 
 	
@@ -215,7 +215,7 @@ a {
   padding: 0 8px;
   content: attr(data-title);
   transition: 0.5s 0.1s;
-  color: #fff;
+  color: #333;
   font-weight: bold;
   font-size: 1.em;
 }
@@ -226,7 +226,7 @@ a {
   bottom: 0;
   left: 0;
   right: 0;
-  color: #fff;
+  color: #333;
   padding: 8px;
   content: attr(data-text);
   transition: 0.5s;
